@@ -12,9 +12,6 @@
   },
   "keywords": [],
   "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
-  "dependencies": {
-    "bluebird": "^3.4.7"
-  },
   "devDependencies": {},
   "repository": {
     "type": "git",
