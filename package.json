@@ -1,6 +1,6 @@
 {
   "name": "promise-inflight",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "One promise for multiple requests in flight to avoid async duplication",
   "main": "inflight.js",
   "files": [
