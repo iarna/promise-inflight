@@ -11,7 +11,7 @@ try {
 const active = {}
 inflight.active = active
 function inflight (unique, doFly) {
-  return Bluebird.all([unique, doFly]).then(function (args) {
+  return Bluebird.all([Promise.resolve(unique), doFly]).then(function (args) {
     const unique = args[0]
     const doFly = args[1]
     if (Array.isArray(unique)) {
