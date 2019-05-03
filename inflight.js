@@ -13,6 +13,7 @@ function _inflight (unique, doFly) {
       return resolve(doFly())
     }))
     active[unique].then(cleanup, cleanup)
+    function cleanup() { delete active[unique] }
   }
   return active[unique]
 }
