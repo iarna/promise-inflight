@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/iarna/promise-inflight/issues"
   },
-  "homepage": "https://github.com/iarna/promise-inflight#readme"
+  "homepage": "https://github.com/iarna/promise-inflight#readme",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
 }
