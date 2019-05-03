@@ -25,10 +25,10 @@ req('foo').then(…)
 req('foo').then(…)
 ```
 
+## Tests
+
+Run `npm test`
+
 ## SEE ALSO
 
 * [inflight](https://npmjs.com/package/inflight) - For the callback based function on which this is based.
-
-## STILL NEEDS
-
-Tests!
