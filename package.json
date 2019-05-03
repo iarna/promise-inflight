@@ -12,7 +12,6 @@
   },
   "keywords": [],
   "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iarna/promise-inflight.git"
