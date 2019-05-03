@@ -2,6 +2,21 @@
 module.exports = inflight
 
 const active = {}
+
+function cleanup() {
+  delete active[unique]
+}
+
+function _inflight (unique, doFly) {
+  if (!active[unique]) {
+    active[unique] = (new Promise(function (resolve) {
+      return resolve(doFly())
+    }))
+    active[unique].then(cleanup, cleanup)
+  }
+  return active[unique]
+}
+
 inflight.active = active
 function inflight (unique, doFly) {
   return Promise.all([unique, doFly]).then(function (args) {
@@ -15,15 +30,4 @@ function inflight (unique, doFly) {
       return _inflight(unique, doFly)
     }
   })
-
-  function _inflight (unique, doFly) {
-    if (!active[unique]) {
-      active[unique] = (new Promise(function (resolve) {
-        return resolve(doFly())
-      }))
-      active[unique].then(cleanup, cleanup)
-      function cleanup() { delete active[unique] }
-    }
-    return active[unique]
-  }
 }
